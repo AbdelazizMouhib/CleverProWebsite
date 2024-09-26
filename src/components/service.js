@@ -4,8 +4,8 @@ export const services = [
     name: 'digital marketing',
     title: 'Digital Marketing',
     description: 'CleverPro offers a comprehensive suite of digital marketing services designed to elevate your brand’s online presence and drive measurable results. Their SEO experts employ cutting-edge techniques to enhance your website’s visibility on search engines, ensuring that your business ranks higher and attracts more organic traffic. Through strategic SEM campaigns, CleverPro targets specific audiences with precision, utilizing platforms like Google Ads to maximize your return on investment. Their social media management team crafts engaging content, schedules posts, and interacts with followers to build a vibrant online community around your brand. Additionally, CleverPro’s content creation services produce high-quality blog posts, articles, videos, and infographics that resonate with your audience and establish your authority in the industry. Their email marketing campaigns are meticulously designed to nurture leads, promote products or services, and maintain strong customer relationships, driving conversions and loyalty.',
-    image: '/public/icons/content-strategy.png',
-    Moreimage: '/public/assets/marketingdigitale.jpeg',
+    image: '/icons/content-strategy.png',
+    Moreimage: '/assets/marketingdigitale.jpeg',
     team: [
       { id: 1, name: 'Abdelaziz Mouhib', position: 'Fondateur et Manager', image: null }, 
       { id: 2, name: 'OUALID MOUSSI', position: 'Responsable Marketing', image: null },
@@ -21,7 +21,7 @@ export const services = [
     title: 'Apps Developpement',
     description: 'At CleverPro, app development is approached with a focus on creating custom mobile and web applications that are tailored to meet the unique needs of each client. Their development process begins with a thorough understanding of your business objectives and user requirements, ensuring that the final product is both functional and user-friendly. The UI/UX design team at CleverPro prioritizes intuitive and visually appealing interfaces that enhance user engagement and satisfaction. On the backend, their developers ensure that your applications are secure, scalable, and efficient, providing a robust foundation for your digital solutions. CleverPro also offers ongoing maintenance and support, ensuring that your applications remain up-to-date with the latest features and security enhancements, and continue to perform optimally as your business grows.',
     image: '/icons/smartphone.png',
-    Moreimage: '/public/assets/appdev.jpeg',
+    Moreimage: '/assets/appdev.jpeg',
     team: [
       { id: 7, name: 'Abdelaziz Mouhib', position: 'Fondateur et Manager', image: null }, 
       { id: 8, name: 'OUALID MOUSSI', position: 'Responsable Marketing', image: null },
