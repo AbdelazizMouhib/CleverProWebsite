@@ -9,7 +9,7 @@ const About = ({about}) => {
         </div>
         <div className='aboutustext-container'>
             <h2>About Us</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nulla nihil dolor recusandae quidem sint exercitationem natus fugiat! Voluptate molestiae minima aliquid eos possimus nisi maxime excepturi, velit consequuntur temporibus?</h3>
+            <h3>Clever Pro, founded by Abdelaziz Mouhib, is a versatile Moroccan company specializing in IT and renewable energy solutions, application development, AI technology, and digital marketing. The company excels in integrating cutting-edge IT with sustainable energy projects, creating custom software solutions like the AI-powered Marrakech Explorer for personalized travel experiences, and offering comprehensive digital marketing strategies to enhance online presence. Committed to innovation and sustainability, Clever Pro aims to drive growth and contribute to a greener future through its diverse range of services.</h3>
         </div>
     </section>
   )
