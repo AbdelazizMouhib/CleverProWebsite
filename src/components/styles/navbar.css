@@ -16,7 +16,6 @@
 .logo-container img {
     width: 170px;
     height: 90px;
-    cursor: pointer;
     transition: transform 300ms ease-in-out;
 }
 
