@@ -1,0 +1,118 @@
+/* Navbar styling for all screen sizes */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.logo-container img {
+    width: 170px;
+    height: 90px;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.links-container {
+    display: flex;
+    gap: 25px;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.links-container a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: color 350ms ease-in-out;
+}
+
+.links-container a:hover {
+    color: #008080;
+}
+
+.links-container a::before {
+    content: '';
+    position: absolute;
+    max-width: 0;
+    height: 1px;
+    bottom: -2px;
+    background-color: #008080;
+    transition: max-width 350ms ease-in-out;
+}
+
+.links-container a:hover::before {
+    max-width: 100%;
+}
+
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.hamburger-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .links-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .links-container.active {
+        display: flex;
+    }
+
+    .hamburger-icon {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 3%;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin: 0 auto;
+    }
+
+    .links-container {
+        margin: 0 auto;
+        gap: 10px;
+    }
+}

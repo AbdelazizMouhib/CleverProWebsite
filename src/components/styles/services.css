@@ -1,0 +1,170 @@
+/* Services Section Styles */
+.services-section .services-container {
+    position: relative;
+    top: 200px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically initially */
+    align-items: center; /* Center elements horizontally */
+    gap: 50px; /* Space between elements */
+}
+
+/* Services Title */
+.services-section .services-container .service-title {
+    position: relative;
+    font-size: xx-large;
+    color: #008080;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.services-section .services-container .service-title::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    border-bottom: 2px solid #008080;
+    border-radius: .5em;
+    animation: animatedborder 1s ease-in-out alternate infinite;
+}
+
+/* Animation Keyframes */
+@keyframes animatedborder {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+/* Services Cards Layout */
+.services-section .services-container .services-cards {
+    display: flex; /* Keep flexbox for cards */
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center cards horizontally */
+    gap: 50px; /* Space between cards */
+}
+
+.services-section .services-container .services-cards .service-card {
+    display: flex; /* Flex for card content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    box-shadow: 0 0 2px black;
+    background-color: #F8F4E1;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 15em;
+    height: 300px;
+    width: 300px; /* Fixed width for cards */
+    transition: 350ms ease-in-out;
+}
+
+.services-section .services-container .services-cards h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-weight: 300;
+    color: black;
+}
+
+.services-section .services-container .services-cards .service-card button {
+    padding: 10px;
+    border-radius: .5em;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    transition: 250ms ease-in-out;
+}
+
+.services-section .services-container .services-cards .service-card button:hover {
+    background-color: #008080;
+}
+
+.services-section .services-container .services-cards .service-card:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.services-section .services-container .services-cards .service-card h2,
+.services-section .services-container .services-cards .service-card h3 {
+    padding: 10px;
+}
+
+.services-section .services-container .services-cards .service-card img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Services Title with Animation */
+.services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: #333; /* Text color */
+}
+
+/* Create the animated border effect */
+.services-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the title */
+    left: 50%; /* Start from the middle */
+    width: 100%; /* Full width */
+    height: 3px; /* Thickness of the border */
+    background-color: #008080; /* Border color */
+    transform: translateX(-50%); /* Center the border */
+    animation: borderAnimation 2s ease infinite; /* Infinite animation */
+}
+
+/* Keyframes for the border animation */
+@keyframes borderAnimation {
+    0%, 100% {
+        transform: translateX(-50%) scaleX(0); /* Start and end with no width */
+    }
+    50% {
+        transform: translateX(-50%) scaleX(1); /* Full width at halfway point */
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .services-section .services-container {
+        flex-direction: column; /* Stack title and cards vertically */
+        align-items: center; /* Center items */
+        gap: 30px; /* Reduce gap for smaller screens */
+    }
+
+    .services-section .services-container .service-title {
+        font-size: 2rem; /* Smaller title for medium screens */
+    }
+
+    .services-section .services-container .services-cards {
+        gap: 20px; /* Reduce gap between cards for medium screens */
+        flex-direction: column; /* Stack cards vertically for smaller screens */
+    }
+
+    .services-section .services-container .services-cards .service-card {
+        width: 100%; /* Full width for cards on small screens */
+        max-width: 300px; /* Set a max width to avoid stretching */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section .services-container {
+        top: 100px; /* Adjust top spacing for small screens */
+        padding: 0 10px; /* Add padding for small screens */
+    }
+
+    .services-section .services-container .service-title {
+        font-size: 1.5rem; /* Smaller title for small screens */
+    }
+
+    .services-section .services-container .services-cards .service-card {
+        width: 100%; /* Full width for cards on small screens */
+    }
+}

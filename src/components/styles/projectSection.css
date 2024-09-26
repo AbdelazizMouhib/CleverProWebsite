@@ -1,0 +1,131 @@
+/* General section styles */
+.projects-section {
+    position: relative;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Add transition for smooth effect */
+}
+
+/* When section is in view, apply these changes */
+.projects-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Title styling */
+.projects-section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif   ;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.projects-section.visible .projects-section-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Title underline */
+.projects-section-title::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #008080;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Project item styling */
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: calc(var(--delay) * 0.2s); /* Delay based on index */
+}
+
+/* When section is visible, project items become visible */
+.projects-section.visible .project-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text section */
+.project-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #555;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Image section */
+.project-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternate layout: Image on the right */
+.image-right {
+    flex-direction: row-reverse;
+}
+
+/* Alternate layout: Image on the left */
+.image-left {
+    flex-direction: row;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-image,
+    .project-text {
+        max-width: 100%;
+    }
+}

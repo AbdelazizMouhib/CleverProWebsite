@@ -1,0 +1,112 @@
+.contact-section {
+  position: relative;
+  top: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form-container {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 40px 50px 15px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.contact-form-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+  color: #008080; /* Dark Brown from palette */
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #008080; /* Light Orange from palette */
+  border-radius: 5px;
+  font-size: 16px;
+  color: black; /* Dark Brown from palette */
+  background-color: #fff7e1; /* Light Peach from palette */
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #008080; /* Medium Orange/Brown from palette */
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #008080; /* Medium Orange/Brown from palette */
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #026f6f; /* Dark Brown from palette */
+}
+
+/* Google Maps Section */
+.map-container {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  height: 400px; /* Initial height */
+  min-height: 300px; /* Minimum height for smaller screens */
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+      flex-direction: column;
+  }
+
+  .contact-form-container {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .map-container {
+      height: 300px; /* Reduced height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-container {
+      height: 200px; /* Further reduced height for very small screens */
+  }
+}
+.message-sent {
+  background-color: #dff0d8; /* Light green background */
+  border: 1px solid #d6e9c6; /* Darker green border */
+  color: #3c763d; /* Dark green text */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.message-sent button {
+  background: none;
+  border: none;
+  color: #3c763d;
+  cursor: pointer;
+  margin-left: 10px;
+}

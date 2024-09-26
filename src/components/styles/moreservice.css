@@ -1,0 +1,75 @@
+/* styles/moreService.css */
+
+.service-details {
+    position: relative; /* Required for positioning child elements */
+    width: 100%;
+    height: 250vh;
+    margin: 0; 
+  }
+  
+  .image-container {
+    width: 100%; /* Full width for the image container */
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .service-image {
+    width: 100%; /* Image takes full width of the container */
+    height:500px; /* Maintain aspect ratio */
+    max-height: 900px; /* Set a reasonable maximum height for the image */
+    object-fit: cover;
+ /* Ensure the image covers the area */
+  }
+  
+  .details-container {
+    position: relative;
+    width: fit-content; /* Position text over the image */
+    bottom: 70px; /* Distance from the bottom of the image */
+    left: 10px; /* Distance from the left side of the image */
+    color: white; /* Text color for visibility over the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    padding: 10px; /* Padding around the text */
+  }
+  
+  .details-container h2 {
+
+    font-size: 1.5rem; /* Size of the title */
+    margin: 0.5rem 0; /* Margin above and below the title */
+  }
+  
+ .service-description {
+    position: relative;
+    top: 10px;
+     width: 95%;
+     font-family: sans-serif;
+    font-size: 1.3rem; /* Size of the description text */
+    line-height: 1.5; /* Line height for better readability */
+    margin: 0 0 0 20px; /* Remove default margin */
+  }
+
+  
+
+
+.back-button {
+    position: absolute; /* Position it on top of the image */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+     background-color:  rgba(0, 0, 0, 0.5);
+     padding: 10px;
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 10; /* Ensure it is above the image */
+  }
+  
+  .back-button svg {
+    width: 24px;
+   rotate: 180deg;/* Width of the arrow */
+    height: 24px; /* Height of the arrow */
+  }
+  
+  /* Optional: Change color on hover */
+  .back-button:hover svg {
+    fill: #008080; /* Change color on hover */
+  }
+  
