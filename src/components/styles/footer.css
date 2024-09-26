@@ -33,6 +33,7 @@
 
 .footer-section ul li {
     margin: 10px 0;
+    cursor: pointer;
 }
 
 .footer-section a {
