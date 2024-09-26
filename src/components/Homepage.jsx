@@ -28,7 +28,7 @@ const Homepage = () => {
   return (
     <>
       <Navbar about={about} services={services} contact={contact} projects={projects} top={top}  scrolltosection={scrolltosection} />
-       <Header/>
+       <Header top={top} scrolltosection={scrolltosection}/>
        <About about={about} scrolltosection={scrolltosection}/>
        <Services serv={services} scrolltosection={scrolltosection}/>
        <ProjectSection projet={projects} scrolltosection={scrolltosection}/>
