@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './styles/header.css'; // Ensure your CSS file is imported
 
-const Header = () => {
+const Header = ({top}) => {
   useEffect(() => {
     const headerText = document.querySelector('.header-section h2');
 
@@ -23,7 +23,7 @@ const Header = () => {
   }, []);
 
   return (
-    <section className='header-section'>
+    <section className='header-section' ref={top}>
       <div className='headertext-container'>
         <h2>Welcome to Our World</h2>
       </div>
