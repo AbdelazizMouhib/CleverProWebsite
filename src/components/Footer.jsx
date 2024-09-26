@@ -2,17 +2,18 @@
 import React from 'react';
 import './styles/footer.css'; // Import the CSS for the footer
 import cleverprologo from "../../public/assets/cleverprologo.png"
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a onClick={() => props.scrolltosection(props.about)}>About</a></li>
+                        <li><a onClick={() => props.scrolltosection(props.services)}>Services</a></li>
+                       <li><a onClick={() => props.scrolltosection(props.projects)}>Projects</a></li>
+                        <li><a onClick={() => props.scrolltosection(props.contact)}>Contact</a></li>
+                                        
                     </ul>
                 </div>
                 <div className="footer-section">

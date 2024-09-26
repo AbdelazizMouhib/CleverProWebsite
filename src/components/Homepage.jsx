@@ -33,7 +33,7 @@ const Homepage = () => {
        <Services serv={services} scrolltosection={scrolltosection}/>
        <ProjectSection projet={projects} scrolltosection={scrolltosection}/>
        <ContactForm contact={contact} scrolltosection={scrolltosection}/>
-       <Footer/>
+       <Footer about={about} services={services} contact={contact} projects={projects}  scrolltosection={scrolltosection}/>
 
     </>
   )
