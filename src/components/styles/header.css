@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+
     top: -100px;
-    height: 100vh; /* Full viewport height */
+    height: 200vh; /* Full viewport height */
     background-image: url('../../../public/assets/headerimg.jpg'); /* Add your background image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the background image */
@@ -37,8 +38,12 @@
 /* Styles for h2 with animation */
 .header-section h2 {
     color: white; /* Make text visible on any background */
-    font-size: 3rem; /* Adjust font size as needed */
+    font-size: 4rem; /* Adjust font size as needed */
     z-index: 1;
+    border: 3px solid #008080;
+    padding: 10px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
     opacity: 0; /* Start invisible */
     transform: translateY(20px); /* Start slightly lower */
     transition: opacity 1s, transform 1s; /* Smooth transition */
