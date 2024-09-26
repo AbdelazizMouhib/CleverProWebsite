@@ -7,13 +7,13 @@ const ProjectSection = ({projet}) => {
             id: 1,
             title: 'MeX',
             description: 'Marrakech Explorer is an innovative application that personalizes travel itineraries using artificial intelligence to provide users with a unique and immersive experience.   ',
-            image: '../../public/assets/aiapp.jpeg',
+            image: '/assets/aiapp.jpeg',
         },
         {
             id: 2,
             title: 'Clever AI Marketing',
             description: 'This project has the potential to transform the digital marketing landscape by offering innovative and effective solutions through AI. By combining automation, personalization, and continuous training, the platform can meet the growing needs of businesses and marketing professionals.',
-            image: '../../public/assets/platformformation.jpeg',
+            image: '/assets/platformformation.jpeg',
         },
    
     ];
