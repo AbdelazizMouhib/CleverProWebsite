@@ -1,5 +1,5 @@
 // MoreService.js
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { services } from './service.js'; // Import service data
 import TeamSlider from './Team.jsx'; // Import TeamSlider component
@@ -13,7 +13,9 @@ const MoreService = () => {
   if (!service) {
     return <h2>Service not found</h2>;
   }
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <section className='service-details'>
       <div className='image-container'>
