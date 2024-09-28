@@ -168,3 +168,12 @@
         width: 100%; /* Full width for cards on small screens */
     }
 }
+
+@media (max-width: 594px) {
+   .services-section{
+     margin-left: 30%;
+     text-align: center;
+   }
+
+}
+

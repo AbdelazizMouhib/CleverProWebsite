@@ -62,7 +62,12 @@
     color: white;
 }
 
-
+.footer-section{
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    margin: 10px auto;
+}
 .footer-section img{
     width: 170px;
     margin-right: 60px;
@@ -81,3 +86,8 @@
     color: black;
     font-size: 0.9em;
 }
+@media (max-width: 594px) {
+    .footer{
+      width: 110vh;
+    }
+  }

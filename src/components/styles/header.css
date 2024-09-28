@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
     top: -100px;
     height: 200vh; /* Full viewport height */
     background-image: url('../../../public/assets/headerimg.jpg'); /* Add your background image */
@@ -60,7 +59,7 @@
     .header-section {
         position: relative;
         flex-direction: column;
-        top: -200px; /* Stack items vertically on smaller screens */
+        top: -311px; /* Stack items vertically on smaller screens */
     }
 
     .header-section h2 {
@@ -68,8 +67,13 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 594px) {
     .header-section h2 {
         font-size: 1.5rem; /* Further decrease font size for very small screens */
     }
+    .header-section{
+        top: -311px;
+        width: 120vh;
+    }
 }
+
