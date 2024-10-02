@@ -1,79 +1,83 @@
-/* Sticky Navbar */
+    /* Sticky Navbar */
 
 
-/* Header Section */
-.header-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    top: -100px;
-    height: 200vh; /* Full viewport height */
-    background-image: url('../../../public/assets/headerimg.jpg'); /* Add your background image */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent repetition */
-    position: relative;
-}
-
-.headertext-container {
-    text-align: center;
-    z-index: 1;
-    padding: 1rem; /* Add some padding */
-    max-width: 90%; /* Prevent overflow on small screens */
-}
-
-.header-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
-    z-index: 0;
-}
-
-/* Styles for h2 with animation */
-.header-section h2 {
-    color: white; /* Make text visible on any background */
-    font-size: 4rem; /* Adjust font size as needed */
-    z-index: 1;
-    border: 3px solid #008080;
-    padding: 10px;
-    font-weight: 300;
-    font-family: Arial, Helvetica, sans-serif;
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 1s, transform 1s; /* Smooth transition */
-}
-
-/* Active class for animation */
-.header-section h2.animate {
-    opacity: 1; /* End state: fully visible */
-    transform: translateY(0); /* End state: original position */
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+    /* Header Section */
     .header-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: -100px;
+        height: 200vh; /* Full viewport height */
+        background-image: url('../../../public/assets/headerimg.jpg'); /* Add your background image */
+        background-size: cover; /* Ensure the image covers the entire section */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent repetition */
         position: relative;
-        flex-direction: column;
-        top: -311px; /* Stack items vertically on smaller screens */
     }
 
+    .headertext-container {
+        text-align: center;
+        z-index: 1;
+        padding: 1rem; /* Add some padding */
+        max-width: 90%; /* Prevent overflow on small screens */
+    }
+
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
+        z-index: 0;
+    }
+
+    /* Styles for h2 with animation */
     .header-section h2 {
-        font-size: 2rem; /* Smaller font size for smaller screens */
+        color: white; /* Make text visible on any background */
+        font-size: 4rem; /* Adjust font size as needed */
+        z-index: 1;
+        border: 3px solid #008080;
+        padding: 10px;
+        font-weight: 300;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly lower */
+        transition: opacity 1s, transform 1s; /* Smooth transition */
     }
-}
 
-@media (max-width: 594px) {
-    .header-section h2 {
-        font-size: 1.5rem; /* Further decrease font size for very small screens */
+    /* Active class for animation */
+    .header-section h2.animate {
+        opacity: 1; /* End state: fully visible */
+        transform: translateY(0); /* End state: original position */
     }
-    .header-section{
-        top: -311px;
-        width: 120vh;
-    }
-}
 
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        .header-section {
+            position: relative;
+            flex-direction: column;
+            top: -311px; 
+            width: 100%;/* Stack items vertically on smaller screens */
+        }
+
+        .header-section h2 {
+            font-size: 2rem; /* Smaller font size for smaller screens */
+        }
+    }
+    @media  (max-width: 600px) {
+        .header-section {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            top: -311px; 
+            
+            width: 237%;/* Stack items vertically on smaller screens */
+        }
+
+        .header-section h2 {
+            font-size: 2rem; /* Smaller font size for smaller screens */
+        }
+    }

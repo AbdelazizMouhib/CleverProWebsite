@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: flex-start; /* Align items to the start */
+    align-items: center; /* Align items to the start */
     margin: 0 auto; /* Center the section */
     width: 100%; /* Full width */
     padding: 20px; /* Add padding for better spacing */
@@ -91,13 +91,15 @@
     }
 }
 
-@media (max-width: 594px) {
+@media (max-width: 600px) {
    .aboutus-section{
-    display: grid;
-    place-items: center;
-    text-align: center ;
-    margin-left: 20%;
-
+     display: flex;
+     width: 140%;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin: 0 50%;
    }
 }
 

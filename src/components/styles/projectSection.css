@@ -129,8 +129,8 @@
         max-width: 100%;
     }
 }
-@media (max-width: 594px) {
+@media (max-width: 600px) {
     .projects-section{
-        margin-left: 30%;
+      width: 230%;
     }
   }
