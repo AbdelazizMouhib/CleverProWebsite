@@ -9,6 +9,7 @@
   margin: 0 auto;
 }
 
+/* Contact form container */
 .contact-form-container {
   flex: 1;
   background-color: #ffffff;
@@ -77,6 +78,7 @@
 @media screen and (max-width: 768px) {
   .contact-section {
       flex-direction: column;
+      padding: 20px; /* Adjust padding for smaller screens */
   }
 
   .contact-form-container {
@@ -87,13 +89,55 @@
   .map-container {
       height: 300px; /* Reduced height for smaller screens */
   }
+  .map-container iframe {
+    width: 100%; /* Make the iframe take the full width */
+    height: 100%; /* Make the iframe take the full height */
+    border: none; /* Remove default iframe border */
+  }
 }
 
+/* For very small screens */
 @media screen and (max-width: 480px) {
   .map-container {
       height: 200px; /* Further reduced height for very small screens */
   }
+
+  .contact-form-container {
+    padding: 20px; /* Adjust padding for very small screens */
+  }
+
+  .contact-section {
+    padding: 15px; /* Adjust padding to avoid overflow */
+  }
+  .map-container iframe {
+    width: 100%; /* Make the iframe take the full width */
+    height: 100%; /* Make the iframe take the full height */
+    border: none; /* Remove default iframe border */
+  }
 }
+
+/* Fix for small screens, ensure the section is not too wide */
+@media (max-width: 600px) {
+  .contact-section {
+    width: 100%; /* Ensure the section doesn't overflow */
+    padding: 10px; /* Adjust padding */
+  }
+  .map-container iframe {
+    width: 100%; /* Make the iframe take the full width */
+    height: 100%; /* Make the iframe take the full height */
+    border: none; /* Remove default iframe border */
+  }
+
+  .contact-form-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    height: 250px; /* Adjust height for better fit */
+  }
+}
+
 .message-sent {
   background-color: #dff0d8; /* Light green background */
   border: 1px solid #d6e9c6; /* Darker green border */
@@ -109,9 +153,4 @@
   color: #3c763d;
   cursor: pointer;
   margin-left: 10px;
-}
-@media (max-width: 600px) {
- .contact-section{
-  width: 230%;
- }
 }

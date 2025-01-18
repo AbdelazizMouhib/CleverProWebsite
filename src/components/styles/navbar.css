@@ -7,15 +7,16 @@
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.8);
     position: sticky;
-    width: 100%;
+    width: 100%; /* Ensure the navbar spans the full width of the viewport */
     padding: 0 5%;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevents content overflow */
 }
 
 .logo-container img {
-    width: 150px; /* Reduced size for better mobile compatibility */
-    height: auto; /* Keep aspect ratio */
+    width: 150px; /* Optimized size for compatibility */
+    height: auto; /* Maintain aspect ratio */
     transition: transform 300ms ease-in-out;
 }
 
@@ -30,7 +31,8 @@
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: relative; /* For the hover effect positioning */
+    position: relative; /* For hover effect positioning */
+    overflow: hidden; /* Prevent hover effects from overflowing */
 }
 
 .links-container a {
@@ -79,11 +81,13 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 140%;
+        width: 100%; /* Fix width issue */
+        padding: 10px 3%; /* Adjust padding for smaller screens */
     }
 
     .logo-container {
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .links-container {
@@ -91,10 +95,15 @@
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        width: 100%; /* Keep links container within the viewport */
+        padding: 10px 0;
+        box-sizing: border-box;
     }
 
     .links-container.active {
         display: flex;
+        background-color: rgba(255, 255, 255, 0.95); /* Optional background for dropdown */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for clarity */
     }
 
     .hamburger-icon {
@@ -104,9 +113,9 @@
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 10px 3%;
+        padding: 10px 5%; /* Adjust padding for better spacing */
         text-align: center;
-        width: 237%;
+        width: 100%; /* Fix width issue */
     }
 
     .logo-container {
@@ -116,15 +125,15 @@
     .links-container {
         margin: 0 auto;
         gap: 10px;
-        width: 100%; /* Ensure links stay within the screen */
+        width: 100%; /* Ensure links container stays within the screen */
+        padding: 10px 0;
     }
 
     .links-container a {
-        font-size: 1.1em; /* Slightly smaller font for mobile */
+        font-size: 1.1em; /* Slightly smaller font for mobile screens */
     }
 
     .hamburger-icon {
         display: flex;
     }
 }
-

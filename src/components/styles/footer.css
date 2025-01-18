@@ -1,4 +1,3 @@
-/* Footer.css */
 .footer {
     position: relative;
     background-color: #F8F4E1; /* Dark brown */
@@ -6,12 +5,16 @@
     text-align: left;
     padding: 40px 20px;
     top: 100vh;
+    width: 100%; /* Ensures footer spans the full width of the viewport */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    width: 100%; /* Ensures container stays within the viewport */
 }
 
 .footer-section {
@@ -19,6 +22,9 @@
     place-items: center;
     text-align: center;
     margin: 5px;
+    width: 100%; /* Ensures sections take full width on small screens */
+    max-width: 300px; /* Limits width to keep sections readable */
+    box-sizing: border-box; /* Prevents width issues with padding */
 }
 
 .footer-section h2 {
@@ -48,46 +54,66 @@
 .social-media {
     display: flex;
     gap: 15px;
+    justify-content: center; /* Centers icons on smaller screens */
+    flex-wrap: wrap;
+    width: 100%; /* Prevents overflow */
+    box-sizing: border-box;
 }
 
 .social-media a {
     color: black; /* Beige for icons */
     font-size: 1.5em;
     cursor: pointer;
-    padding:10px;
-    border-radius: .5em;
+    padding: 10px;
+    border-radius: 0.5em;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
-.social-media a:hover{
+
+.social-media a:hover {
     background-color: #008080;
     color: white;
 }
 
-.footer-section{
-    display: grid;
-    gap: 20px;
-    text-align: center;
-    margin: 10px auto;
-}
-.footer-section img{
+.footer-section img {
     width: 170px;
-    margin-right: 60px;
+    margin: 0 auto; /* Centers image */
     height: 90px;
-    transition: 300ms ease-in-out;}
-.footer-section img:hover{
+    transition: 300ms ease-in-out;
+}
+
+.footer-section img:hover {
     transform: scale(1.05);
 }
-.footer-section h2{
+
+.footer-section h2 {
     font-family: sans-serif;
     font-weight: 300;
 }
+
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
     color: black;
     font-size: 0.9em;
 }
+
 @media (max-width: 600px) {
-    footer{
-      width: 238%;
+    .footer-container {
+        flex-direction: column; /* Stacks sections vertically */
+        align-items: center; /* Centers sections */
     }
-  }
+
+    .footer-section {
+        margin: 10px 0; /* Adds spacing between sections */
+    }
+
+    .social-media a {
+        font-size: 1.2em; /* Adjusts icon size for smaller screens */
+        padding: 8px; /* Reduces padding for smaller screens */
+    }
+
+    .footer-section img {
+        width: 150px; /* Adjusts image size for smaller screens */
+        height: auto; /* Maintains aspect ratio */
+    }
+}

@@ -3,7 +3,8 @@
     position: relative;
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Align items to the start */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Wrap content if necessary */
     margin: 0 auto; /* Center the section */
     width: 100%; /* Full width */
     padding: 20px; /* Add padding for better spacing */
@@ -22,9 +23,10 @@
     width: 100%; /* Full width on small screens */
     max-width: 500px; /* Limit maximum width */
     display: grid;
-    margin-top: 60px;
+    margin-top: 60px; /* Add spacing between sections */
     gap: 55px;
     box-sizing: border-box; /* Include padding in width */
+    text-align: left; /* Default alignment */
 }
 
 .aboutus-section .aboutustext-container h3 {
@@ -46,16 +48,18 @@
     .aboutus-section {
         flex-direction: column; /* Stack image and text vertically */
         align-items: center; /* Center align items */
-        top: 50px; /* Adjust top spacing */
+        padding: 20px; /* Adjust padding */
     }
 
     .aboutus-section .aboutusimg-container img {
         width: 80%; /* Adjust image width for medium screens */
+        max-width: 450px; /* Ensure it doesn’t get too large */
     }
 
     .aboutus-section .aboutustext-container {
         width: 90%; /* Responsive text container width */
         margin-top: 20px; /* Reduce margin for smaller screens */
+        text-align: center; /* Center text */
     }
 
     .aboutus-section .aboutustext-container h2 {
@@ -69,8 +73,9 @@
 
 @media (max-width: 480px) {
     .aboutus-section {
-        padding: 10px; /* Adjust padding for very small screens */
-        top: 30px; /* Adjust top spacing for very small screens */
+        padding: 15px; /* Adjust padding for very small screens */
+        flex-direction: column;
+        align-items: center; /* Center align items */
     }
 
     .aboutus-section .aboutusimg-container img {
@@ -80,6 +85,7 @@
 
     .aboutus-section .aboutustext-container {
         width: 100%; /* Full width for text container */
+        margin-top: 15px; /* Adjust spacing */
     }
 
     .aboutus-section .aboutustext-container h2 {
@@ -91,15 +97,22 @@
     }
 }
 
+/* Media query for very small screens (below 600px) */
 @media (max-width: 600px) {
-   .aboutus-section{
-     display: flex;
-     width: 140%;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     margin: 0 50%;
-   }
-}
+    .aboutus-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+    }
 
+    .aboutus-section .aboutusimg-container img {
+        width: 90%; /* Full width for image */
+    }
+
+    .aboutus-section .aboutustext-container {
+        margin-top: 10px; /* Reduce margin for very small screens */
+    }
+}

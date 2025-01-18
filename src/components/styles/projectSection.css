@@ -23,7 +23,7 @@
 .projects-section-title {
     font-size: 3rem;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif   ;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 40px;
     color: #333;
@@ -129,8 +129,22 @@
         max-width: 100%;
     }
 }
+
+/* Fix for small screens, ensure the section is not too wide */
 @media (max-width: 600px) {
-    .projects-section{
-      width: 230%;
+    .projects-section {
+        width: 100%; /* Ensure the section doesn't overflow */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
-  }
+
+    .project-item {
+        flex-direction: column;
+        padding: 15px; /* Adjust padding inside project items */
+    }
+
+    .project-image,
+    .project-text {
+        max-width: 100%;
+        padding: 10px; /* Adjust padding inside project content */
+    }
+}
