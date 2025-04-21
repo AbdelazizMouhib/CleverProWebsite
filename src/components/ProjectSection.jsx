@@ -8,12 +8,14 @@ const ProjectSection = ({projet}) => {
             title: 'MeX',
             description: 'Marrakech Explorer is an innovative application that personalizes travel itineraries using artificial intelligence to provide users with a unique and immersive experience.   ',
             image: '/assets/aiapp.jpeg',
+            url:"https://www.mex.ma"
         },
         {
             id: 2,
             title: 'Clever AI Marketing',
             description: 'This project has the potential to transform the digital marketing landscape by offering innovative and effective solutions through AI. By combining automation, personalization, and continuous training, the platform can meet the growing needs of businesses and marketing professionals.',
             image: '/assets/platformformation.jpeg',
+            url:""
         },
    
     ];
@@ -58,7 +60,7 @@ const ProjectSection = ({projet}) => {
                     style={{ '--delay': index }} // Custom delay per item
                 >
                     <div className="project-text">
-                        <h2 className="project-title">{project.title}</h2>
+                        <a href={project.url?project.url:"#"} style={{textDecoration:"none",color:"black"}}><h2 className="project-title">{project.title}</h2></a>
                         <p className="project-description">{project.description}</p>
                     </div>
                     <div className="project-image">
